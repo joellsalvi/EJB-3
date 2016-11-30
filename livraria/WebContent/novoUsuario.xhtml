@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+      
+	<ui:composition template="_template.xhtml">
+   		<ui:define name="corpo">
+   			<h1>Cadastrar Novo Usuário</h1>
+			<h:form id="newUserForm" style="width: 40%;  margin: 0 auto;" >
+				<p:panelGrid columns="2">
+				
+				 	<f:facet name="header">Informações do Novo Usuário</f:facet>
+				
+					<p:outputLabel value="Login: "/>
+					<p:inputText value="#{cadastroUsuarioBean.usuario.login}" required="true" id="login" />
+						
+					<p:outputLabel value="Senha: " />
+					<h:inputSecret value="#{cadastroUsuarioBean.usuario.senha}" required="true" id="senha" />
+
+					<p:outputLabel value="Confirmar Senha: " />
+					<h:inputSecret value="#{cadastroUsuarioBean.usuario.confirmarSenha}" required="true" id="confirmarSenha" />
+
+				    <f:facet name="footer">
+						<p:commandButton value="Cadastrar" action="#{cadastroUsuarioBean.efetuarCadastro}" update=":mensagens @form" />
+						<p:commandButton value="Teste" action="#{cadastroUsuarioBean.teste}" />
+						<p:commandButton value="Testel" action="#{loginBean.teste}" />
+					</f:facet>
+				</p:panelGrid>
+			</h:form>
+   		</ui:define>
+   	</ui:composition>
+</html>
