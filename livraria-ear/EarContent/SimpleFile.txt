@@ -1,0 +1,1 @@
+Arquivo utilizado somente para gravar a pasta EarContent no Git 
