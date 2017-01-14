@@ -8,15 +8,15 @@ import javax.faces.event.PhaseEvent;
 import javax.faces.event.PhaseId;
 import javax.faces.event.PhaseListener;
 
-public class Autorizador implements PhaseListener{
+public class Autorizador implements PhaseListener {
 	
 	private static final long serialVersionUID = 1L;
 
 	public void afterPhase(PhaseEvent event) {
-
 		FacesContext context = event.getFacesContext();
-		
-		if ("/login.xhtml".equals(context.getViewRoot().getViewId())) {
+		String pageViewId = context.getViewRoot().getViewId();
+
+		if ("/login.xhtml".equals(pageViewId) || "/novoUsuario.xhtml".equals(pageViewId)) {
 			return;
 		}
 		

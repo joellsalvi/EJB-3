@@ -45,10 +45,6 @@ public class LoginBean {
 		return "";
 	}
 	
-	public String cadastrar() {
-		return "novoUsuario";
-	}
-
 	public String efetuaLogout() {
 		this.usuarioLogado.deslogar();
 		return this.menu.paginaLogin();
@@ -67,9 +63,4 @@ public class LoginBean {
 		return usuarioEncontrado.getSenha().equals(usuario.getSenha());
 	}
 
-	public String teste() {
-		System.out.println("entrou");
-		return "";
-	}
-	
 }

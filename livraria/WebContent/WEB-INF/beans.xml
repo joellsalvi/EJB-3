@@ -3,6 +3,6 @@
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/beans_1_1.xsd"
 	bean-discovery-mode="all">
 
-	<!-- Aqui vao as configuracoes do CDI -->
+	<!-- Aqui vao as configuracoes do CDI - Apenas este arquivo basta para que o mesmo seja ativado -->
 
 </beans>	

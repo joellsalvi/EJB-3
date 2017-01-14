@@ -13,10 +13,11 @@
 				 	<f:facet name="header">Login:</f:facet>
 				
 					<p:outputLabel value="Login: "/>
-					<p:inputText value="#{loginBean.usuario.login}" required="true" id="login" />
+					<p:inputText type="text" value="#{loginBean.usuario.login}" required="true" id="login" />
 						
 					<p:outputLabel value="Senha: " />
-					<h:inputSecret value="#{loginBean.usuario.senha}" required="true" id="senha" />
+					<p:inputText type="password" value="#{loginBean.usuario.senha}" required="true" id="senha" />
+<!-- 					<h:inputSecret value="#{loginBean.usuario.senha}" required="true" id="senha" /> -->
 
 				    <f:facet name="footer">
 					    <div>
@@ -25,7 +26,7 @@
 																 update=":mensagens @form" />
 					    	</div>
 							<div align="right">
-								<p:commandButton value="Novo Usuário" action="#{loginBean.cadastrar}" 
+								<p:commandButton value="Novo Usuário" action="novoUsuario?faces-redirect=true" 
 																 update=":mensagens @form" />
 						 	</div>
 					 	</div>

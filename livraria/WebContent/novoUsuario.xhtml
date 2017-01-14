@@ -17,15 +17,13 @@
 					<p:inputText value="#{cadastroUsuarioBean.usuario.login}" required="true" id="login" />
 						
 					<p:outputLabel value="Senha: " />
-					<h:inputSecret value="#{cadastroUsuarioBean.usuario.senha}" required="true" id="senha" />
+					<p:inputText type="password" value="#{cadastroUsuarioBean.usuario.senha}" required="true" id="senha" />
 
 					<p:outputLabel value="Confirmar Senha: " />
-					<h:inputSecret value="#{cadastroUsuarioBean.usuario.confirmarSenha}" required="true" id="confirmarSenha" />
+					<p:inputText type="password" value="#{cadastroUsuarioBean.usuario.confirmarSenha}" required="true" id="confirmarSenha" />
 
 				    <f:facet name="footer">
 						<p:commandButton value="Cadastrar" action="#{cadastroUsuarioBean.efetuarCadastro}" update=":mensagens @form" />
-						<p:commandButton value="Teste" action="#{cadastroUsuarioBean.teste}" />
-						<p:commandButton value="Testel" action="#{loginBean.teste}" />
 					</f:facet>
 				</p:panelGrid>
 			</h:form>
